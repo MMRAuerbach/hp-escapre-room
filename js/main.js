@@ -171,6 +171,6 @@ function showFireplace() {
 changeBackground();
 
 //Cheating options
-debug = true;
-alterThePage(pageFiveData);
-showFireplace();
+// debug = true;
+// alterThePage(pageFiveData);
+// showFireplace();
