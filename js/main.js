@@ -365,5 +365,5 @@ changeBackground();
 imageHolder.classList.add('privet');
 
 //Cheating options
-debug = true;
-eighthPuzzle();
+// debug = true;
+// eighthPuzzle();
