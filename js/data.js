@@ -81,9 +81,26 @@ const pageFourData = {
     ],
     featureImage: ['/img/old-lock.jpg', ['w-75']],
     secondaryText: [
-        'You decide to use the secret backdoor, but you will need a numeral combination, the hint is:',
+        'You decide to use the secret backdoor, but you will need a numeral combination, sadly the door is protected and alohamora does not work.<br> You have hint:',
         'a+b+c+(c*a)+(b-a)-c+(a*b*c)',
         '',
     ],
-    btnOptions: ['Continue', ['px-5', 'btn', 'btn-lg', 'btn-warning']]
+    btnOptions: ['Unlock me', ['px-5', 'btn', 'btn-lg', 'btn-warning']]
+}
+
+const pageFiveData = {
+    newPar: ['', ['m-5']],
+    newInput: [],
+    removeBackground: 'inside_hogwarts_express',
+    addBackground: 'great-hall',
+    title: `You made it in, but ....`,
+    mainText: [
+        'Oh no, you missed the sorting ceremony AND all the food is gone..',
+        '',
+        'And worst of all, still no sign of Trevor. Look arround to find clues or food, when you click on the button, you can search places in the great hall..',
+        '',
+    ],
+    featureImage: '',
+
+    btnOptions: ['Look arround', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
 }

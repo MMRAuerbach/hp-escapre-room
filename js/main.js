@@ -6,6 +6,8 @@ The winner will be the one who controls that chaos, both his own and the enemies
 - Napoleon Bonaparte
 */
 const btnStartGame = document.querySelector('.btn-startgame');
+const mainMask = document.querySelector('.hp-mask');
+const theClickables = document.querySelector('.the-clickables')
 const imageHolder = document.querySelector('.hp-bg-image');
 const titleHolder = document.querySelector('.title-holder');
 const textHolder = document.querySelector('.text-holder');
@@ -108,12 +110,67 @@ function fourthPuzzle() {
         const answer = newInput.value.toLowerCase();
         const result = checkAnswer('trap', answer);
 
-        console.log(result);
+        if (!result) {
+            alterAndShowModal(
+                'D0h! That is not correct :-(', 
+                addParagraph('Reckon you need more time with professor Wagenaar for math.. We will sign you up..'));
+            return;
+        } 
+
+        fifthPuzzle();
     });
+}
+
+function fifthPuzzle() {
+    const newBtn = alterThePage(pageFiveData);
+    newBtn.addEventListener('click', function() {
+        showMainHall();
+    });
+}
+
+const clickableClasses = ['great-hall', 'fireplace'];
+function changeClickable(className) {
+    for (let i = 0; i < clickableClasses.length; i++) {
+        imageHolder.classList.remove(clickableClasses[i]);
+    }
+
+    imageHolder.classList.add(className);
+}
+
+function showMainHall() {
+    changeClickable('great-hall');
+    mainMask.classList.add('hidden');
+    theClickables.classList.remove('hidden');
+    theClickables.innerHTML = '';
+
+    const firePlace = document.createElement('div');
+    firePlace.classList.add('click-fireplace');
+    firePlace.addEventListener('click', function() {
+        showFireplace();
+    });
+    
+    theClickables.appendChild(firePlace);
+}
+
+function showFireplace() {
+    changeClickable('fireplace');
+    mainMask.classList.add('hidden');
+    theClickables.classList.remove('hidden');
+    theClickables.innerHTML = '';
+    
+    const goBack = document.createElement('div');
+    goBack.classList.add('click-goback');
+    goBack.innerHTML = '&lt;';
+    goBack.addEventListener('click', function() {
+        showMainHall();
+    });
+    
+    theClickables.appendChild(goBack);
 }
 //Let's start the game (just change a background ;-)
 changeBackground();
 
 //Cheating options
-//debug = true;
-//fourthPuzzle();
+debug = true;
+alterThePage(pageFiveData);
+showFireplace();
