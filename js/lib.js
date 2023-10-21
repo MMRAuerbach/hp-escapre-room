@@ -107,7 +107,11 @@ function alterAndShowModal(titleText, bodyElement) {
 
 function alterThePage(data) {
     const newPar = addParagraph(data.newPar[0], data.newPar[1]);
-    const newInput = addInput(data.newInput[0], data.newInput[1]);
+    let newInput = '';
+    if (data.newInput.length > 0) {
+        newInput = addInput(data.newInput[0], data.newInput[1]);
+    }
+    
     changeBackground();
 
     //Main changes to the game frontend
@@ -125,6 +129,7 @@ function alterThePage(data) {
         
     if (data.featureImage)
         textHolder.appendChild(addImage(data.featureImage[0], data.featureImage[1]));
+
     if (data.secondaryText) {
         for (let i = 0; i < data.secondaryText.length; i++) {
             const extra = [];
@@ -135,7 +140,10 @@ function alterThePage(data) {
         }
     }
 
-    newPar.appendChild(newInput);
+    //Only show the input if the array was not empty
+    if (newInput !== '')
+        newPar.appendChild(newInput);
+
     textHolder.appendChild(newPar);
     btnHolder.innerHTML = '';
     newBtn = createBtn(data.btnOptions[0], data.btnOptions[1]);

@@ -22,12 +22,12 @@ const modalColours = [
     ['bg-raven-grey','text-raven-dark-blue'],
     ['bg-huffle-light-brown','text-huffle-canary'],
 ];
-const q2a = [5,4,7,9,0,'a','n'];
+const q2a = [5,4,7,9,0,'a','n','','trap'];
 const answers = [
     ['st pancras station', 'st.pancras station', 'st. pancras station'],
-    '','','','',
+    '','','crisps','',
     '32154',
-    '','',''
+    '','','4174'
 ];
 const theModal = new bootstrap.Modal(document.querySelector('.main-modal'));
 
@@ -80,11 +80,40 @@ function thirdPuzzle() {
         addParagraph(`Your journey continues... Please remember B = 8`)
     );
 
+    //New button - new click event ;-)
+    newBtn.addEventListener('click', function() {
+        const newInput = document.querySelector('.question-three-input');
+        const answer = newInput.value.toLowerCase();
+        const result = checkAnswer(9, answer);
+        if (!result) {
+            alterAndShowModal(
+                'That is ........ incorrect :-(', 
+                addParagraph('That is, sadly to say, not what we are looking for.... Think again and think hard, and do not forget to think British not American...'));
+            return;
+        } 
+
+        fourthPuzzle();
+    });
 }
 
+function fourthPuzzle() {
+    const newBtn = alterThePage(pageFourData);
+    alterAndShowModal(
+        'Ow my, you are on a winning streak!', 
+        addParagraph(`But sadly, still no Trevor...  Please remember C = 77`)
+    );
+
+    newBtn.addEventListener('click', function() {
+        const newInput = document.querySelector('.question-four-input');
+        const answer = newInput.value.toLowerCase();
+        const result = checkAnswer('trap', answer);
+
+        console.log(result);
+    });
+}
 //Let's start the game (just change a background ;-)
 changeBackground();
 
 //Cheating options
-debug = true;
-thirdPuzzle();
+//debug = true;
+//fourthPuzzle();

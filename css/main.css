@@ -53,6 +53,7 @@ html, body {
 .privet { background: url('/img/privet.jpg') no-repeat center center fixed;  }
 .platform_934 { background: url('/img/platform_9_3_4.jpg') no-repeat center center fixed;  }
 .inside_hogwarts_express { background: url('/img/inside_hogwarts_express.jpg') no-repeat center center fixed;  }
+.hogwarts-castle-outside { background: url('/img/hogwarts-castle-outside.jpeg') center center fixed;  }
 
 /* Other important stuff */
 .hp-mask {

@@ -66,3 +66,24 @@ const pageThreeData = {
     ],
     btnOptions: ['What yummy food are we?', ['px-5', 'btn', 'btn-lg', 'btn-warning']]
 }
+
+const pageFourData = {
+    newPar: ['', ['m-5']],
+    newInput: ['9000', ['question-four-input']],
+    removeBackground: 'inside_hogwarts_express',
+    addBackground: 'hogwarts-castle-outside',
+    title: `Welcome to Hogwarts school of Witchcraft and Wizardry`,
+    mainText: [
+        'Sadly you could not find Trevor inside the Hogwarts Express...',
+        '',
+        'Because of the search, you are late and do not want to enter thru the main gate, professor Snape might catch you and deduct one trillion points from your house.',
+        '',
+    ],
+    featureImage: ['/img/old-lock.jpg', ['w-75']],
+    secondaryText: [
+        'You decide to use the secret backdoor, but you will need a numeral combination, the hint is:',
+        'a+b+c+(c*a)+(b-a)-c+(a*b*c)',
+        '',
+    ],
+    btnOptions: ['Continue', ['px-5', 'btn', 'btn-lg', 'btn-warning']]
+}
