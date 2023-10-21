@@ -290,7 +290,7 @@ function showFireplace() {
             thePar.append(theEl);    
         }
         
-        const secondPar = addParagraph('This panel seems to be lose.. After some wiggleing you found an old door key (again) but what is the code?.');
+        const secondPar = addParagraph('This panel seems to be lose.. After some wiggleing you found an old door key (again) but what is the code (click on the numbers/panel)?.');
         thePar.append(secondPar);
 
         alterAndShowModal(
