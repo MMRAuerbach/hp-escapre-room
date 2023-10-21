@@ -1,0 +1,69 @@
+/* Set the variables */
+:root {
+    --griff-dark-red: #740001;
+    --griff-red: #ae0001;
+    --griff-yellow: #eeba30;
+    --griff-gold: #d3a625;
+    --slith-dark-green: #1a472a;
+    --slith-green: #2a623d;
+    --slith-dark-silver: #5d5d5d;
+    --slith-light-silver: #aaaaaa;
+    --raven-dark-blue: #0e1a40;
+    --raven-blue: #222f5b;
+    --raven-grey-lady: #bebebe;
+    --raven-gold: #946b2d;
+    --huffle-canary: #ecb939;
+    --huffle-light-canary: #f0c75e;
+    --huffle-light-brown: #726255;
+    --huffle-dark-brown: #372e29;
+}
+
+/* Stretch is to the max */
+html, body {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    overflow-y: hidden;
+}
+
+/* Main colours and background */
+.text-griff-gold { color: var(--griff-gold); }
+.text-slith-light-silver { color: var(--slith-light-silver); }
+.text-raven-grey { color: var(--raven-grey-lady); }
+.text-huffle-canary { color: var(--huffle-canary); }
+.text-griff-dark-red { color: var(--griff-dark-red); }
+.text-slith-dark-green { color: var(--slith-dark-green); }
+.text-raven-dark-blue { color: var(--raven-dark-blue); }
+.text-huffle-dark-brown { color: var(--huffle-dark-brown); }
+
+.bg-griff-dark-red { background: var(--griff-dark-red); }
+.bg-slith-dark-green {background: var(--slith-dark-green); }
+.bg-raven-dark-blue {background: var(--raven-dark-blue); }
+.bg-huffle-dark-brown {background: var(--huffle-dark-brown); }
+.bg-huffle-light-brown {background: var(--huffle-light-brown); }
+.bg-griff-gold { background: var(--griff-gold); }
+.bg-slith-light-silver {background: var(--slith-light-silver); }
+.bg-raven-grey {background: var(--raven-grey-lady); }
+.bg-huffle-canary {background: var(--huffle-canary); }
+
+/* Different backgrounds */
+.pancras { background: url('/img/stpancras.jpg') no-repeat center center fixed; }
+.dorms { background: url('/img/dormitory.webp') no-repeat center center fixed;  }
+.privet { background: url('/img/privet.jpg') no-repeat center center fixed;  }
+.platform_934 { background: url('/img/platform_9_3_4.jpg') no-repeat center center fixed;  }
+.inside_hogwarts_express { background: url('/img/inside_hogwarts_express.jpg') no-repeat center center fixed;  }
+
+/* Other important stuff */
+.hp-mask {
+    margin-top: 50px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.my-bg-image {
+    object-fit: cover;
+}
+.hp-bg-black {
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
