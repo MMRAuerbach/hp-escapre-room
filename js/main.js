@@ -12,6 +12,7 @@ const imageHolder = document.querySelector('.hp-bg-image');
 const titleHolder = document.querySelector('.title-holder');
 const textHolder = document.querySelector('.text-holder');
 const btnHolder = document.querySelector('.btn-holder');
+const theModal = new bootstrap.Modal(document.querySelector('.main-modal'));
 const backgrounds = [
     ['text-griff-gold','bg-griff-dark-red'],
     ['text-slith-light-silver','bg-slith-dark-green'],
@@ -31,7 +32,6 @@ const answers = [
     '32154',
     '','','4174'
 ];
-const theModal = new bootstrap.Modal(document.querySelector('.main-modal'));
 
 // To let or not to let, that is the question... (Not William Shakespear)
 let backgroundIndex = -1, oldBackgroundIndex = -1, debug = false;
@@ -169,8 +169,9 @@ function showFireplace() {
 }
 //Let's start the game (just change a background ;-)
 changeBackground();
+imageHolder.classList.add('privet');
 
 //Cheating options
-// debug = true;
-// alterThePage(pageFiveData);
-// showFireplace();
+//debug = true;
+//alterThePage(pageFiveData);
+//showFireplace();
