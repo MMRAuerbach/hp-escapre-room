@@ -148,8 +148,15 @@ function showMainHall() {
     firePlace.addEventListener('click', function() {
         showFireplace();
     });
-    
+    const mainDoor = document.createElement('div');
+    mainDoor.classList.add('click-main-door');
+    mainDoor.addEventListener('click', function() {
+        alterAndShowModal(
+            'The main door...', 
+            addParagraph('Filtch has already locked the main door, this is not the way out...'));
+    });
     theClickables.appendChild(firePlace);
+    theClickables.appendChild(mainDoor);
 }
 
 function showFireplace() {
@@ -172,6 +179,6 @@ changeBackground();
 imageHolder.classList.add('privet');
 
 //Cheating options
-//debug = true;
-//alterThePage(pageFiveData);
-//showFireplace();
+debug = true;
+alterThePage(pageFiveData);
+showMainHall();

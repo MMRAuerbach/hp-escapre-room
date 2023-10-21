@@ -73,17 +73,25 @@ html, body {
 
 [class^="click-"] {
     cursor: pointer;
-    position: relative;
+    position: absolute;
     border: 1px solid gold;
 }
 
+.the-clickables {
+    position: relative;
+}
 .click-fireplace {
-    width: 350px;
-    height: 500px;
-    top: calc(100vh - 900px);
+    width: 325px;
+    height: 350px;
+    top: calc(100vh - 700px);
     left: 0;
 }
-
+.click-main-door {
+    width: 93px;
+    height: 142px;
+    top: calc(100vh - 515px);
+    left: 622px;
+}
 .click-goback {
     width: 50px;
     height: 50px;
@@ -94,4 +102,22 @@ html, body {
     padding: 0;
     margin: 0;
     line-height: 40px;
+    border: 1px dotted gold;
+}
+
+
+/* Playable options  */
+.warning-info { display: none; }
+/* media layouts and information */
+@media screen and (max-width: 800px) {
+    .game-info { display: none;}
+    .warning-info { 
+        display: block; 
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--slith-dark-green);
+        color: var(--slith-light-silver);
+    }
 }
