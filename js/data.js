@@ -104,3 +104,16 @@ const pageFiveData = {
 
     btnOptions: ['Look arround', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
 }
+const pageSixData = {
+    newPar: ['', ['m-5']],
+    newInput: [],
+    removeBackground: 'fireplace',
+    addBackground: 'secret-passage',
+    title: `A new trail to Trevor...`,
+    mainText: [
+        'Something nice will show up here...',
+    ],
+    featureImage: '',
+
+    btnOptions: ['Walk through the passage...', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
+}

@@ -151,10 +151,41 @@ function showMainHall() {
     const mainDoor = document.createElement('div');
     mainDoor.classList.add('click-main-door');
     mainDoor.addEventListener('click', function() {
+        changeBackground();
         alterAndShowModal(
             'The main door...', 
             addParagraph('Filtch has already locked the main door, this is not the way out...'));
     });
+    const bookcase = document.createElement('div');
+    bookcase.classList.add('click-bookcase');
+    bookcase.addEventListener('click', function() {
+        changeBackground();
+        alterAndShowModal(
+            'A nice bookcase', 
+            addParagraph('You find a nice bookcase in the greathall.. There a lot of books here. You notice that there are a couple of the same books in this case, when you look closley there are <b>eight</b> books with a <b>dark blue</b> cover called \'Fantastic Beasts, and where to find them\' '));
+    });
+
+    const plate = document.createElement('div');
+    plate.classList.add('click-plate');
+    plate.addEventListener('click', function() {
+        changeBackground();
+        alterAndShowModal(
+            'A dirty plate', 
+            addParagraph('How odd... there is a dirty plate here.. Normally all plates look clean, but this is not a clean plate. There are <b>two</b> breadcrumbs on the plate that kinda look <b>canary yellow</b>... Why wasn\'t this plate cleaned by the house elfs??'));
+    });
+
+    const candles = document.createElement('div');
+    candles.classList.add('click-candles');
+    candles.addEventListener('click', function() {
+        changeBackground();
+        alterAndShowModal(
+            'The floating candles...', 
+            addParagraph('This is magic at the purest... The roof does not seem to exists and a lot of floating candles without strings... All the candles seem to be white/ yellow... you can spot <b>no</b> candles that are <b>brown</b>'));
+    });
+
+    theClickables.appendChild(candles);
+    theClickables.appendChild(plate);
+    theClickables.appendChild(bookcase);
     theClickables.appendChild(firePlace);
     theClickables.appendChild(mainDoor);
 }
@@ -229,11 +260,12 @@ function showFireplace() {
             theDiv
         );
     });
+
     const doorpanel = document.createElement('div');
     doorpanel.classList.add('click-doorpanel');
     doorpanel.addEventListener('click', function() {
         changeBackground();
-        const thePar = addParagraph('This panel seems to be lose.. After some wiggleing you found an old door key (again) but what is the code?.', ['position-relative']);
+        const thePar = addParagraph('When you look closely to the woodenpanels you notice a toad-slime-track going under it.. Might there be a door here?', ['position-relative']);
 
         const newImg = document.createElement('img');
         newImg.src = '/img/old-lock.jpg';
@@ -246,21 +278,40 @@ function showFireplace() {
             theEl.classList.add(`popup-number-${items[i]}`);
             theEl.addEventListener('click', function() {
                 triedPanelCode += items[i];
-                console.log(triedPanelCode);
                 const result = checkAnswer('wh00p', triedPanelCode);
                 if (result) {
-                    alert(98765);
+                    theModal.hide();
+                    secretPassage();
                 }
             });
             thePar.append(theEl);    
         }
         
+        const secondPar = addParagraph('This panel seems to be lose.. After some wiggleing you found an old door key (again) but what is the code?.');
+        thePar.append(secondPar);
+
         alterAndShowModal(
             'The doorpanel', 
             thePar
         );
     });
 
+    const hogwartsShield = document.createElement('div');
+    hogwartsShield.classList.add('click-hogwarts-shield');
+    hogwartsShield.addEventListener('click', function() {
+        const theDiv = document.createElement('div');
+        theDiv.appendChild(addParagraph('On top of the fireplace you see the Hogwarts crest. A nice shield with crests of the four houses pictured in it.'));
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('When you look close you can see the names of the houses karfed in the shield in <b>red</b>'));
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('<b>Gryffindor, Ravenclaw, Hufflepuff</b> and <b>Slytherin</b>'));
+        alterAndShowModal(
+            'Hogwarts shield', 
+            theDiv
+        );
+    });
+    
+    theClickables.appendChild(hogwartsShield);
     theClickables.appendChild(doorpanel);
     theClickables.appendChild(fireplace);
     theClickables.appendChild(raven);
@@ -268,11 +319,22 @@ function showFireplace() {
     theClickables.appendChild(slyth);
     theClickables.appendChild(goBack);
 }
+
+function secretPassage() {
+    mainMask.classList.remove('hidden');
+    theClickables.classList.add('hidden');
+
+    const newBtn = alterThePage(pageSixData);
+    newBtn.addEventListener('click', function() {
+        
+    });
+}
+
 //Let's start the game (just change a background ;-)
 changeBackground();
 imageHolder.classList.add('privet');
 
 //Cheating options
-// debug = false;
-// alterThePage(pageFiveData);
-// showFireplace();
+debug = true;
+alterThePage(pageFiveData);
+showMainHall();

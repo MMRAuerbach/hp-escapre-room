@@ -56,6 +56,7 @@ html, body {
 .hogwarts-castle-outside { background: url('/img/hogwarts-castle-outside.jpeg') center center fixed;  }
 .great-hall { background: url('/img/great-hall.png') no-repeat bottom left;  }
 .fireplace { background: url('/img/great-hall-fireplace.png') no-repeat bottom left;  }
+.secret-passage { background: url('/img/secret-passage.jpg') no-repeat bottom left;  }
 
 /* Other important stuff */
 .hidden { display: none !important; }
@@ -100,6 +101,24 @@ html, body {
     top: calc(100vh - 515px);
     left: 622px;
 }
+.click-bookcase {
+    width: 30px;
+    height: 60px;
+    top: calc(100vh - 450px);
+    left: 350px;
+}
+.click-plate {
+    width: 30px;
+    height: 30px;
+    top: calc(100vh - 290px);
+    left: 505px;
+}
+.click-candles {
+    width: 450px;
+    height: 140px;
+    top: calc(100vh - 700px);
+    left: 410px;
+}
 .click-slyth {
     width: 50px;
     height: 75px;
@@ -130,7 +149,12 @@ html, body {
     top: calc(100vh - 300px);
     left: 325px;
 }
-
+.click-hogwarts-shield {
+    width: 158px;
+    height: 150px;
+    top: calc(100vh - 645px);
+    left: 525px;
+}
 .click-goback {
     width: 50px;
     height: 50px;
