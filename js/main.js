@@ -218,6 +218,7 @@ function showFireplace() {
     const slyth = document.createElement('div');
     slyth.classList.add('click-slyth');
     slyth.addEventListener('click', function() {
+        changeBackground();
         const theDiv = document.createElement('div');
         theDiv.appendChild(addParagraph('This is the slytherin sign, or also know as "Zwadderig" if you really want to screw-up English and read the books in Dutch...'))
         theDiv.appendChild(addParagraph(''));
@@ -231,6 +232,7 @@ function showFireplace() {
     const huff = document.createElement('div');
     huff.classList.add('click-huff');
     huff.addEventListener('click', function() {
+        changeBackground();
         const theDiv = document.createElement('div');
         theDiv.appendChild(addParagraph('Hmm this is just the Hufflepuf sign, nothing really out of the ordinary'))
         theDiv.appendChild(addParagraph(''));
@@ -246,6 +248,7 @@ function showFireplace() {
     const raven = document.createElement('div');
     raven.classList.add('click-raven');
     raven.addEventListener('click', function() {
+        changeBackground();
         const theDiv = document.createElement('div');
         theDiv.appendChild(addParagraph('Ahh the witty...'))
         theDiv.appendChild(addParagraph(''));
@@ -299,6 +302,7 @@ function showFireplace() {
     const hogwartsShield = document.createElement('div');
     hogwartsShield.classList.add('click-hogwarts-shield');
     hogwartsShield.addEventListener('click', function() {
+        changeBackground();
         const theDiv = document.createElement('div');
         theDiv.appendChild(addParagraph('On top of the fireplace you see the Hogwarts crest. A nice shield with crests of the four houses pictured in it.'));
         theDiv.appendChild(addParagraph(''));
@@ -361,5 +365,5 @@ changeBackground();
 imageHolder.classList.add('privet');
 
 //Cheating options
-// debug = true;
-// eighthPuzzle();
+debug = true;
+eighthPuzzle();
