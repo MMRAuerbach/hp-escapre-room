@@ -25,16 +25,16 @@ const modalColours = [
     ['bg-raven-grey','text-raven-dark-blue'],
     ['bg-huffle-light-brown','text-huffle-canary'],
 ];
-const q2a = [5,4,7,9,0,'a','n','','trap'];
+const q2a = [5,4,7,9,0,'a','wh00p','','trap'];
 const answers = [
     ['st pancras station', 'st.pancras station', 'st. pancras station'],
     '','','crisps','',
     '32154',
-    '','','4174'
+    'eightfourtwosixzerofive','','4174'
 ];
 
 // To let or not to let, that is the question... (Not William Shakespear)
-let backgroundIndex = -1, oldBackgroundIndex = -1, debug = false;
+let backgroundIndex = -1, oldBackgroundIndex = -1, debug = false, triedPanelCode = '';
 
 if (btnStartGame)
     btnStartGame.addEventListener('click', firstClick);
@@ -172,6 +172,100 @@ function showFireplace() {
         showMainHall();
     });
     
+    const fireplace = document.createElement('div');
+    fireplace.classList.add('click-fireplace-close');
+    fireplace.addEventListener('click', function() {
+        changeBackground();
+        const thePar = addParagraph('That is a nice, cold, fireplace... nothing here...', ['position-relative']);
+
+        alterAndShowModal(
+            'The fireplace', 
+            thePar
+        );
+    });
+
+    const slyth = document.createElement('div');
+    slyth.classList.add('click-slyth');
+    slyth.addEventListener('click', function() {
+        const theDiv = document.createElement('div');
+        theDiv.appendChild(addParagraph('This is the slytherin sign, or also know as "Zwadderig" if you really want to screw-up English and read the books in Dutch...'))
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('But for now you study the sign and count noless then <b>six green</b> snakes..'));
+        alterAndShowModal(
+            'The slytherin sign', 
+            theDiv
+        );
+    });
+
+    const huff = document.createElement('div');
+    huff.classList.add('click-huff');
+    huff.addEventListener('click', function() {
+        const theDiv = document.createElement('div');
+        theDiv.appendChild(addParagraph('Hmm this is just the Hufflepuf sign, nothing really out of the ordinary'))
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('When you look really really close you see some sort of flagg'));
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('<b>dark-blue, red, canary-yellow, green, brown, silver</b>'));
+        theDiv.appendChild(addParagraph('Could this be a clue??'));
+        alterAndShowModal(
+            'Hufflepuff sign', 
+            theDiv
+        );
+    });
+    const raven = document.createElement('div');
+    raven.classList.add('click-raven');
+    raven.addEventListener('click', function() {
+        const theDiv = document.createElement('div');
+        theDiv.appendChild(addParagraph('Ahh the witty...'))
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('As you look closely to the Ravenclaw sign you see it is dusty and you sneeze...'));
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('Atchoe!'));
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('You dust of the sign a bit more and read the inscription, in silver you read'));
+        theDiv.appendChild(addParagraph('<b>Intelligent, Wise, Sharp, Individual and Witty</b>'));
+        alterAndShowModal(
+            'Ravenclaws dusty sign', 
+            theDiv
+        );
+    });
+    const doorpanel = document.createElement('div');
+    doorpanel.classList.add('click-doorpanel');
+    doorpanel.addEventListener('click', function() {
+        changeBackground();
+        const thePar = addParagraph('This panel seems to be lose.. After some wiggleing you found an old door key (again) but what is the code?.', ['position-relative']);
+
+        const newImg = document.createElement('img');
+        newImg.src = '/img/old-lock.jpg';
+        newImg.classList.add('w-100');
+        thePar.append(newImg);
+        triedPanelCode = '';
+        const items = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'zero'];
+        for (let i = 0; i < items.length; i++) {
+            const theEl = document.createElement('div');
+            theEl.classList.add(`popup-number-${items[i]}`);
+            theEl.addEventListener('click', function() {
+                triedPanelCode += items[i];
+                console.log(triedPanelCode);
+                const result = checkAnswer('wh00p', triedPanelCode);
+                if (result) {
+                    alert(98765);
+                }
+            });
+            thePar.append(theEl);    
+        }
+        
+        alterAndShowModal(
+            'The doorpanel', 
+            thePar
+        );
+    });
+
+    theClickables.appendChild(doorpanel);
+    theClickables.appendChild(fireplace);
+    theClickables.appendChild(raven);
+    theClickables.appendChild(huff);
+    theClickables.appendChild(slyth);
     theClickables.appendChild(goBack);
 }
 //Let's start the game (just change a background ;-)
@@ -179,6 +273,6 @@ changeBackground();
 imageHolder.classList.add('privet');
 
 //Cheating options
-// debug = true;
+// debug = false;
 // alterThePage(pageFiveData);
-// showMainHall();
+// showFireplace();

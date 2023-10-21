@@ -71,10 +71,18 @@ html, body {
     background-color: rgba(0, 0, 0, 0.5)
 }
 
+[class^="popup-number-"]  {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    /* border: 1px solid pink; */
+    cursor: pointer;
+}
+
 [class^="click-"] {
     cursor: pointer;
     position: absolute;
-    border: 1px solid gold;
+    /* border: 1px solid gold; */
 }
 
 .the-clickables {
@@ -92,6 +100,37 @@ html, body {
     top: calc(100vh - 515px);
     left: 622px;
 }
+.click-slyth {
+    width: 50px;
+    height: 75px;
+    top: calc(100vh - 450px);
+    left: 420px;
+}
+.click-huff {
+    width: 50px;
+    height: 75px;
+    top: calc(100vh - 450px);
+    left: 525px;
+}
+.click-raven {
+    width: 50px;
+    height: 75px;
+    top: calc(100vh - 450px);
+    left: 633px;
+}
+.click-doorpanel {
+    width: 50px;
+    height: 63px;
+    top: calc(100vh - 106px);
+    left: 267px;    
+}
+.click-fireplace-close {
+    width: 500px;
+    height: 300px;
+    top: calc(100vh - 300px);
+    left: 325px;
+}
+
 .click-goback {
     width: 50px;
     height: 50px;
@@ -105,6 +144,16 @@ html, body {
     border: 1px dotted gold;
 }
 
+.popup-number-one { top: 147px; left: 140px; }
+.popup-number-two { top: 147px; left: 180px; }
+.popup-number-three { top: 147px; left: 220px; }
+.popup-number-four { top: 147px; left: 259px; }
+.popup-number-five { top: 147px; left: 299px; }
+.popup-number-six { top: 235px; left: 140px; }
+.popup-number-seven { top: 235px; left: 180px; }
+.popup-number-eight { top: 235px; left: 220px; }
+.popup-number-nine { top: 235px; left: 258px; }
+.popup-number-zero { top: 235px; left: 298px; }
 
 /* Playable options  */
 .warning-info { display: none; }
