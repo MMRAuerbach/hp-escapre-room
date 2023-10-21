@@ -57,6 +57,8 @@ html, body {
 .great-hall { background: url('/img/great-hall.png') no-repeat bottom left;  }
 .fireplace { background: url('/img/great-hall-fireplace.png') no-repeat bottom left;  }
 .secret-passage { background: url('/img/secret-passage.jpg') no-repeat bottom left;  }
+.common-room { background: url('/img/commonroom-fireplace.png') no-repeat bottom left;  }
+.dorms { background: url('/img/dorms.jpg') no-repeat center center;  }
 
 /* Other important stuff */
 .hidden { display: none !important; }

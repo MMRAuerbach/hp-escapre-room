@@ -111,9 +111,44 @@ const pageSixData = {
     addBackground: 'secret-passage',
     title: `A new trail to Trevor...`,
     mainText: [
-        'Something nice will show up here...',
+        'As the door slowly opens you notice a small corridor...',
+        'Could this be a secretpassage not seen or known on the Marauders map??',
+        'You can see some trace of Trevor going down this secret passage,',
+        'determined to help your good friend Neville your follow the trail',
+        '',
+        'Where will the trail go to??',
     ],
     featureImage: '',
 
     btnOptions: ['Walk through the passage...', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
+}
+const pageSevenData = {
+    newPar: ['', ['m-5']],
+    newInput: ['?????', ['question-seven-input']],
+    removeBackground: 'secret-passage',
+    addBackground: 'common-room',
+    title: `Welcome to the commonroom`,
+    mainText: [
+        'In the commonroom you find a new trial going up, but as you you will now have found out, you can not just go follow the trail...',
+        'Solve the following puzzle to contine... But beware... 1 is not always 1, sometimes 1 is .... ??',
+        '',
+    ],
+    featureImage: ['/img/sudoku.png', ['w-50']],
+    secondaryText: [
+        'Make sure you understand the hint ;-)'
+    ],
+    btnOptions: ['Solve me :-)', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
+}
+const pageEightData = {
+    newPar: ['', ['m-5']],
+    newInput: '',
+    removeBackground: 'common-room',
+    addBackground: 'dorms',
+    title: `Nighty night..... `,
+    mainText: [
+        '',
+    ],
+    featureImage: '',
+    
+    btnOptions: ['Sleep well....', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
 }

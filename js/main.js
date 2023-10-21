@@ -25,10 +25,10 @@ const modalColours = [
     ['bg-raven-grey','text-raven-dark-blue'],
     ['bg-huffle-light-brown','text-huffle-canary'],
 ];
-const q2a = [5,4,7,9,0,'a','wh00p','','trap'];
+const q2a = [5,88,7,9,0,'a','wh00p','','trap'];
 const answers = [
     ['st pancras station', 'st.pancras station', 'st. pancras station'],
-    '','','crisps','',
+    'eefad','','crisps','',
     '32154',
     'eightfourtwosixzerofive','','4174'
 ];
@@ -326,7 +326,33 @@ function secretPassage() {
 
     const newBtn = alterThePage(pageSixData);
     newBtn.addEventListener('click', function() {
-        
+        seventhPuzzle();
+    });
+}
+
+function seventhPuzzle() {
+    const newBtn = alterThePage(pageSevenData);
+    newBtn.addEventListener('click', function() {
+        const newInput = document.querySelector('.question-seven-input');
+        const answer = newInput.value.toLowerCase();
+        const result = checkAnswer(88, answer);
+
+        if (!result) {
+            changeBackground();
+            alterAndShowModal(
+                'Nops..', 
+                addParagraph('Sadly to find out you are NOT the puzzlemaster.... Please try again..'));
+            return;
+        }
+
+        eighthPuzzle();
+    });
+}
+
+function eighthPuzzle() {
+    const newBtn = alterThePage(pageEightData);
+    newBtn.addEventListener('click', function() {
+        alert(2345);
     });
 }
 
@@ -335,6 +361,6 @@ changeBackground();
 imageHolder.classList.add('privet');
 
 //Cheating options
-// debug = true;
-// alterThePage(pageFiveData);
-// showMainHall();
+debug = true;
+//alterThePage(pageFiveData);
+eighthPuzzle();
