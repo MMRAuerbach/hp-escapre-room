@@ -179,6 +179,6 @@ changeBackground();
 imageHolder.classList.add('privet');
 
 //Cheating options
-debug = true;
-alterThePage(pageFiveData);
-showMainHall();
+// debug = true;
+// alterThePage(pageFiveData);
+// showMainHall();
