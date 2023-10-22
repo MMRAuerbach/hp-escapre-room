@@ -33,9 +33,12 @@ const mainInfo = [
 ];
 
 // To let or not to let, that is the question... (Not William Shakespear)
-let backgroundIndex = -1, oldBackgroundIndex = -1, debug = false, triedPanelCode = '';
+let partyTimer, endGameTimer, backgroundIndex = -1, oldBackgroundIndex = -1, debug = false, triedPanelCode = '';
 
 function startGame() {
+    if (partyTimer)
+        clearInterval(partyTimer);
+
     changeBackground();
     const newBtn = alterThePage(pageZeroData);
     newBtn.addEventListener('click', firstClick);
@@ -399,7 +402,11 @@ function tenthPuzzle() {
 
 function eleventhPuzzle() {
     const newBtn = alterThePage(pageElevenData);
+    partyTimer = setInterval(changeBackground, 250);
     newBtn.addEventListener('click', function() {
+        if (endGameTimer)
+            clearInterval(endGameTimer);
+
         const theDiv = document.createElement('div')
         theDiv.appendChild(addParagraph('Filtch storms up to you and grabs you by your ear..'));
         theDiv.appendChild(addParagraph(''));
@@ -412,7 +419,7 @@ function eleventhPuzzle() {
             theDiv
         );
 
-        setTimeout(function() {alterThePage(pageZeroData);}, 5000);
+        endGameTimer = setTimeout(startGame, 5000);
     });
 }
 

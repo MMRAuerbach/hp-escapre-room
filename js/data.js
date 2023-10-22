@@ -214,7 +214,7 @@ const pageTenData = {
     btnOptions: ['Can you free the toad?', ['px-5', 'btn', 'btn-lg', 'btn-primary']]
 }
 const pageElevenData = {
-    newPar: ['', ['m-5']],
+    newPar: ['', ['m-2']],
     newInput: '',
     removeBackground: 'bathroom',
     addBackground: 'greathall-party',
@@ -224,5 +224,5 @@ const pageElevenData = {
     ],
     featureImage: ['/img/trevor-and-neville.png', ['w-50']],
 
-    btnOptions: ['This button is only here for the show', ['px-5', 'btn', 'btn-lg', 'btn-outline-success']]
+    btnOptions: ['This button is only here for the show', ['m-0', 'px-5', 'btn', 'btn-lg', 'btn-outline-success']]
 }
