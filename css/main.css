@@ -49,16 +49,18 @@ html, body {
 
 /* Different backgrounds */
 .pancras { background: url('/img/stpancras.jpg') no-repeat center center fixed; }
-.dorms { background: url('/img/dormitory.webp') no-repeat center center fixed;  }
-.privet { background: url('/img/privet.jpg') no-repeat center center fixed;  }
-.platform_934 { background: url('/img/platform_9_3_4.jpg') no-repeat center center fixed;  }
-.inside_hogwarts_express { background: url('/img/inside_hogwarts_express.jpg') no-repeat center center fixed;  }
-.hogwarts-castle-outside { background: url('/img/hogwarts-castle-outside.jpeg') center center fixed;  }
-.great-hall { background: url('/img/great-hall.png') no-repeat bottom left;  }
-.fireplace { background: url('/img/great-hall-fireplace.png') no-repeat bottom left;  }
-.secret-passage { background: url('/img/secret-passage.jpg') no-repeat bottom left;  }
-.common-room { background: url('/img/commonroom-fireplace.png') no-repeat bottom left;  }
-.dorms { background: url('/img/dorms.jpg') no-repeat center center;  }
+.dorms { background: url('/img/dormitory.webp') no-repeat center center fixed; }
+.privet { background: url('/img/privet.jpg') no-repeat center center fixed; }
+.platform_934 { background: url('/img/platform_9_3_4.jpg') no-repeat center center fixed; }
+.inside_hogwarts_express { background: url('/img/inside_hogwarts_express.jpg') no-repeat center center fixed; }
+.hogwarts-castle-outside { background: url('/img/hogwarts-castle-outside.jpeg') center center fixed; }
+.greathall { background: url('/img/greathall.png') no-repeat bottom left; }
+.fireplace { background: url('/img/greathall-fireplace.png') no-repeat bottom left; }
+.secret-passage { background: url('/img/secret-passage.jpg') no-repeat bottom left; }
+.common-room { background: url('/img/commonroom-fireplace.png') no-repeat bottom left; }
+.dorms { background: url('/img/dorms.jpg') no-repeat center center; }
+.bathroom { background: url('/img/bathroom.png') no-repeat bottom right; }
+.greathall-party { background: url('/img/greathall-party.png') no-repeat center center; }
 
 /* Other important stuff */
 .hidden { display: none !important; }

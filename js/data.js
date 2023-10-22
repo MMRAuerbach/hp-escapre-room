@@ -5,6 +5,18 @@ Wine is constant proof that God loves us and loves to see us happy.
 - Benjamin Franklin
 */
 
+const pageZeroData = {
+    newPar: ['', ['m-5']],
+    newInput: '',
+    removeBackground: 'greathall-party',
+    addBackground: 'privet',
+    title: `Welcome to the Harry Potter escapegame`,
+    mainText: [
+        'As not more then often Neville lost his toad Trevor once more.. #sadlife<br>How ever some people have found some clues. Use them to find Trevor and reunite Neville with Trevor.<br>Trevor was sighted going to Kingscross, so lets go there...',
+    ],
+    btnOptions: ['Let\'s-a-go', ['px-5', 'btn', 'btn-lg', 'btn-primary']]
+}
+
 const pageOneData = {
     newPar: ['', ['m-5']],
     newInput: ['Name the station', ['question-one-input']],
@@ -64,7 +76,7 @@ const pageThreeData = {
     secondaryText: [
         '',
     ],
-    btnOptions: ['What yummy food are we?', ['px-5', 'btn', 'btn-lg', 'btn-warning']]
+    btnOptions: ['What yummy food are we?', ['px-5', 'btn', 'btn-lg', 'btn-success']]
 }
 
 const pageFourData = {
@@ -91,8 +103,8 @@ const pageFourData = {
 const pageFiveData = {
     newPar: ['', ['m-5']],
     newInput: [],
-    removeBackground: 'inside_hogwarts_express',
-    addBackground: 'great-hall',
+    removeBackground: 'hogwarts-castle-outside',
+    addBackground: 'greathall',
     title: `You made it in, but ....`,
     mainText: [
         'Oh no, you missed the sorting ceremony AND all the food is gone..',
@@ -120,7 +132,7 @@ const pageSixData = {
     ],
     featureImage: '',
 
-    btnOptions: ['Walk through the passage...', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
+    btnOptions: ['Walk through the passage...', ['px-5', 'btn', 'btn-lg', 'btn-info']]
 }
 const pageSevenData = {
     newPar: ['', ['m-5']],
@@ -137,7 +149,7 @@ const pageSevenData = {
     secondaryText: [
         'Make sure you understand the hint ;-)'
     ],
-    btnOptions: ['Solve me :-)', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
+    btnOptions: ['Solve me :-)', ['px-5', 'btn', 'btn-lg', 'btn-success']]
 }
 const pageEightData = {
     newPar: ['', ['m-5']],
@@ -146,9 +158,65 @@ const pageEightData = {
     addBackground: 'dorms',
     title: `Nighty night..... `,
     mainText: [
+        'After solving that last puzzle you follow Trevors trail into your dormitory, but when you get up there, as always, no sign of Trevor',
         '',
+        'This does feel like "Sorry Mario, but the princess is in another castle" (please pronounce British,not American)',
+        '',
+        'You notice that you actually are very tired, and although you want to keep on searching, this has been a long-long day and that bed just looks fine to you..',
+        '',
+        'After a long-long day you finaly see your fourposter bed, you hop into your PJ\'s and even before your head touches your pillow you are off in dreamland...',
     ],
     featureImage: '',
     
-    btnOptions: ['Sleep well....', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
+    btnOptions: ['Sleep well....', ['px-5', 'btn', 'btn-lg', 'btn-warning']]
+}
+const pageNineData = {
+    newPar: ['', ['m-5']],
+    newInput: '',
+    removeBackground: '',
+    addBackground: '',
+    title: `Goodmorning...`,
+    mainText: [
+        'As you slowly wakeup in the morning you have this odd and nasty feeling about the terrors of the night before.',
+        '',
+        'Where there really dementors? Was it a dream? And where the dungballs is that missing toad..',
+        '',
+        'Then you remeber, the toad, Trevor... You promissed Neville to find the darnish thing, so onward!',
+        '',
+        'When you take a good look arround, you notice the trail of Trevor leading to the bathrooms',
+    ],
+    featureImage: '',
+    
+    btnOptions: ['Onwards to find Trevor...', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
+}
+const pageTenData = {
+    newPar: ['', ['m-5']],
+    newInput: ['42', ['question-ten-input']],
+    removeBackground: 'dorms',
+    addBackground: 'bathroom',
+    title: `Moaning Myrtle\'s or plain bathroom?`,
+    mainText: [
+        'When you enter the bathroom you directly notice the toadlike stench, Trevor must be close.',
+        'You look arround and then you see it, Trevor is there in a corner in a cage with a lock on it..',
+        'Almost there, just this final riddle and you can help out Neville in returning Trevor...'
+    ],
+    featureImage: ['/img/old-lock-2.jpg', ['w-50']],
+    secondaryText: [
+        'Searching the bathroom you find this hint:',
+        '1+1=121<br>1+2=134<br>2+2=444<br>3+2=954<br>7+8=???'
+    ],
+    btnOptions: ['Can you free the toad?', ['px-5', 'btn', 'btn-lg', 'btn-primary']]
+}
+const pageElevenData = {
+    newPar: ['', ['m-5']],
+    newInput: '',
+    removeBackground: 'bathroom',
+    addBackground: 'greathall-party',
+    title: `You did it!`,
+    mainText: [
+        'YES! You got Trevor out... PARTY!',
+    ],
+    featureImage: ['/img/trevor-and-neville.png', ['w-50']],
+
+    btnOptions: ['This button is only here for the show', ['px-5', 'btn', 'btn-lg', 'btn-outline-success']]
 }

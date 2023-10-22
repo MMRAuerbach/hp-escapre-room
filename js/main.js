@@ -25,10 +25,10 @@ const modalColours = [
     ['bg-raven-grey','text-raven-dark-blue'],
     ['bg-huffle-light-brown','text-huffle-canary'],
 ];
-const q2a = [5,88,7,9,0,'a','wh00p','','trap'];
+const q2a = [5,88,'dumbledore',9,0,'a','wh00p','','trap'];
 const answers = [
     ['st pancras station', 'st.pancras station', 'st. pancras station'],
-    'eefad','','crisps','',
+    'eefad','491564','crisps','',
     '32154',
     'eightfourtwosixzerofive','','4174'
 ];
@@ -36,8 +36,10 @@ const answers = [
 // To let or not to let, that is the question... (Not William Shakespear)
 let backgroundIndex = -1, oldBackgroundIndex = -1, debug = false, triedPanelCode = '';
 
-if (btnStartGame)
-    btnStartGame.addEventListener('click', firstClick);
+function startGame() {
+    const newBtn = alterThePage(pageZeroData);
+    newBtn.addEventListener('click', firstClick);
+}
 
 //Orignal important functions ;-) 
 function firstClick() {
@@ -128,7 +130,7 @@ function fifthPuzzle() {
     });
 }
 
-const clickableClasses = ['great-hall', 'fireplace'];
+const clickableClasses = ['greathall', 'fireplace'];
 function changeClickable(className) {
     for (let i = 0; i < clickableClasses.length; i++) {
         imageHolder.classList.remove(clickableClasses[i]);
@@ -138,7 +140,7 @@ function changeClickable(className) {
 }
 
 function showMainHall() {
-    changeClickable('great-hall');
+    changeClickable('greathall');
     mainMask.classList.add('hidden');
     theClickables.classList.remove('hidden');
     theClickables.innerHTML = '';
@@ -342,7 +344,6 @@ function seventhPuzzle() {
         const result = checkAnswer(88, answer);
 
         if (!result) {
-            changeBackground();
             alterAndShowModal(
                 'Nops..', 
                 addParagraph('Sadly to find out you are NOT the puzzlemaster.... Please try again..'));
@@ -356,7 +357,62 @@ function seventhPuzzle() {
 function eighthPuzzle() {
     const newBtn = alterThePage(pageEightData);
     newBtn.addEventListener('click', function() {
-        alert(2345);
+        ninthPuzzle();
+    });
+}
+
+function ninthPuzzle() {
+    const newBtn = alterThePage(pageNineData);
+    const theDiv = document.createElement('div')
+    theDiv.appendChild(addParagraph('After a long day of searching and not eating and working and and and... it is time to sleep...'));
+    theDiv.appendChild(addParagraph(''));
+    theDiv.appendChild(addParagraph('The moment your head touches your pillow, you feel your eyes become heavier and you fall a sleep fast in a deep, deep, deep, deep sleep....'));
+    theDiv.appendChild(addParagraph(''));
+    theDiv.appendChild(addImage('/img/dementor.png', ['w-100']));
+    theDiv.appendChild(addParagraph(''));
+    theDiv.appendChild(addParagraph('That night you dream of missing toads, triollions of points deducted from your house and nasty dementors who want to kiss your soul...'));
+    
+    alterAndShowModal(
+        'Zzzzzz', 
+        theDiv
+    );
+
+    newBtn.addEventListener('click', tenthPuzzle);
+}
+
+function tenthPuzzle() {
+    const newBtn = alterThePage(pageTenData);
+
+    newBtn.addEventListener('click', function() {
+        const newInput = document.querySelector('.question-ten-input');
+        const answer = newInput.value.toLowerCase();
+        const result = checkAnswer('dumbledore', answer);
+        if (!result) {
+            alterAndShowModal('Darnit...', addParagraph('You wiggle and wiggle and wiggle.... and .... no luck :-('));
+            return;
+        } 
+
+        eleventhPuzzle();
+
+    })
+}
+
+function eleventhPuzzle() {
+    const newBtn = alterThePage(pageElevenData);
+    newBtn.addEventListener('click', function() {
+        const theDiv = document.createElement('div')
+        theDiv.appendChild(addParagraph('Filtch storms up to you and grabs you by your ear..'));
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addParagraph('Filtch yells in your ear: "What does the sign on the button say boy??" Do you think I clean up and dust this button so you can touch it with your filthy greasy hands?? NO SIR IT IS NOT! Just for this I shall kick you back to the start of the game!'));
+        theDiv.appendChild(addParagraph(''));
+        theDiv.appendChild(addImage('/img/filtch.png', ['w-100']));
+        
+        alterAndShowModal(
+            'I said!', 
+            theDiv
+        );
+
+        setTimeout(function() {alterThePage(pageZeroData);}, 5000);
     });
 }
 
@@ -365,5 +421,5 @@ changeBackground();
 imageHolder.classList.add('privet');
 
 //Cheating options
-// debug = true;
-// eighthPuzzle();
+debug = true;
+startGame();

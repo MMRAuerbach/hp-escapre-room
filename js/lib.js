@@ -49,6 +49,7 @@ function createBtn(txt, colorClassArr) {
 }
 
 function checkAnswer(questionNo, answer) {
+    changeBackground();
     const idx = q2a.findIndex((e) => e === questionNo);
     correctAnswer = answers[idx];
     //No array answer
@@ -115,10 +116,15 @@ function alterThePage(data) {
     changeBackground();
 
     //Main changes to the game frontend
-    imageHolder.classList.remove(data.removeBackground);
-    imageHolder.classList.add(data.addBackground);
+    if (data.removeBackground)
+        imageHolder.classList.remove(data.removeBackground);
+    if (data.addBackground)
+        imageHolder.classList.add(data.addBackground);
+
     titleHolder.innerHTML = data.title;
     textHolder.innerHTML = '';
+
+    //Show al the primarylines
     for (let i = 0; i < data.mainText.length; i++) {
         const extra = [];
         if (data.mainText[i] === '')
@@ -127,9 +133,11 @@ function alterThePage(data) {
         textHolder.appendChild(addParagraph(data.mainText[i], extra));
     }
         
+    //Add featured image
     if (data.featureImage)
         textHolder.appendChild(addImage(data.featureImage[0], data.featureImage[1]));
 
+    //Show all the secondary lines
     if (data.secondaryText) {
         for (let i = 0; i < data.secondaryText.length; i++) {
             const extra = [];
@@ -144,10 +152,12 @@ function alterThePage(data) {
     if (newInput !== '')
         newPar.appendChild(newInput);
 
+    //Put it all together..
     textHolder.appendChild(newPar);
     btnHolder.innerHTML = '';
     newBtn = createBtn(data.btnOptions[0], data.btnOptions[1]);
     btnHolder.appendChild(newBtn);
 
+    //return the newBtn to put an eventlistener on it
     return newBtn;
 }
