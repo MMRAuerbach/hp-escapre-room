@@ -12,7 +12,13 @@ const pageZeroData = {
     addBackground: 'privet',
     title: `Welcome to the Harry Potter escapegame`,
     mainText: [
+        'You are about to travel to Hogwarts school of Witchcraft and Wizardry. You are packed and ready to go when you get an owl from your friend Neville.',
         'As not more then often Neville lost his toad Trevor once more.. #sadlife<br>How ever some people have found some clues. Use them to find Trevor and reunite Neville with Trevor.<br>Trevor was sighted going to Kingscross, so lets go there...',
+        '',
+        '<b>Please note:</b> In order to solve the game you will need to write things down, make sure you have your quil and a piece of parchment ready (or Notepad for the sad Muggles.',
+        'As you advance in the game you can not go back to previous rooms!',
+        '',
+        '<b>Be warned and read all the text carefully!</b>',
     ],
     btnOptions: ['Let\'s-a-go', ['px-5', 'btn', 'btn-lg', 'btn-primary']]
 }

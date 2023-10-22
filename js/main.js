@@ -388,7 +388,7 @@ function tenthPuzzle() {
         const answer = newInput.value.toLowerCase();
         const result = checkAnswer('dumbledore', answer);
         if (!result) {
-            alterAndShowModal('Darnit...', addParagraph('You wiggle and wiggle and wiggle.... and .... no luck :-('));
+            alterAndShowModal('Darnit...', addParagraph('You wiggle and wiggle and wiggle.... and .... no luck :-( Once again professor Wagenaar is dissapointed in your mathskills'));
             return;
         } 
 
