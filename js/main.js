@@ -5,7 +5,6 @@ The battlefield is a scene of constant chaos.
 The winner will be the one who controls that chaos, both his own and the enemies.
 - Napoleon Bonaparte
 */
-const btnStartGame = document.querySelector('.btn-startgame');
 const mainMask = document.querySelector('.hp-mask');
 const theClickables = document.querySelector('.the-clickables')
 const imageHolder = document.querySelector('.hp-bg-image');
@@ -37,6 +36,7 @@ const answers = [
 let backgroundIndex = -1, oldBackgroundIndex = -1, debug = false, triedPanelCode = '';
 
 function startGame() {
+    changeBackground();
     const newBtn = alterThePage(pageZeroData);
     newBtn.addEventListener('click', firstClick);
 }
@@ -416,10 +416,5 @@ function eleventhPuzzle() {
     });
 }
 
-//Let's start the game (just change a background ;-)
-changeBackground();
-imageHolder.classList.add('privet');
-
-//Cheating options
-debug = true;
+//Let's start the game
 startGame();
