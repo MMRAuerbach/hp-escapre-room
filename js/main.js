@@ -25,11 +25,11 @@ const modalColours = [
     ['bg-huffle-light-brown','text-huffle-canary'],
 ];
 const q2a = [5,88,'dumbledore',9,0,'a','wh00p','','trap'];
-const answers = [
-    ['st pancras station', 'st.pancras station', 'st. pancras station'],
-    'eefad','491564','crisps','',
-    '32154',
-    'eightfourtwosixzerofive','','4174'
+const mainInfo = [
+    ['c3QgcGFuY3JhcyBzdGF0aW9u', 'c3QucGFuY3JhcyBzdGF0aW9u', 'c3QuIHBhbmNyYXMgc3RhdGlvbg=='],
+    'ZWVmYWQ=','NDkxNTY0','Y3Jpc3Bz','',
+    'MzIxNTQ=',
+    'ZWlnaHRmb3VydHdvc2l4emVyb2ZpdmU=','','NDE3NA=='
 ];
 
 // To let or not to let, that is the question... (Not William Shakespear)

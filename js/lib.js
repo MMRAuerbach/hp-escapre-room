@@ -51,7 +51,8 @@ function createBtn(txt, colorClassArr) {
 function checkAnswer(questionNo, answer) {
     changeBackground();
     const idx = q2a.findIndex((e) => e === questionNo);
-    correctAnswer = answers[idx];
+    answer = btoa(answer);
+    correctAnswer = mainInfo[idx];
     //No array answer
     if (!(Object.prototype.toString.call(correctAnswer) == '[object Array]') && correctAnswer.toLowerCase() === answer.toLowerCase()) {
         return true;
