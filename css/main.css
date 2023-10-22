@@ -61,6 +61,9 @@ html, body {
 .dorms { background: url('/img/dorms.jpg') no-repeat center center; }
 .bathroom { background: url('/img/bathroom.png') no-repeat bottom right; }
 .greathall-party { background: url('/img/greathall-party.png') no-repeat center center; }
+.potions-center { background: url('/img/potions-center.png') no-repeat center center; }
+.potions-left { background: url('/img/potions-left.png') no-repeat center center; }
+.potions-right { background: url('/img/potions-right.png') no-repeat center center; }
 
 /* Other important stuff */
 .hidden { display: none !important; }
@@ -76,18 +79,21 @@ html, body {
     background-color: rgba(0, 0, 0, 0.5)
 }
 
+body.debug [class^="popup-number-"],
+body.debug [class^="click-"] {
+    border: 1px solid pink;
+}
+
 [class^="popup-number-"]  {
     position: absolute;
     width: 28px;
     height: 28px;
-    /* border: 1px solid pink; */
     cursor: pointer;
 }
 
 [class^="click-"] {
     cursor: pointer;
     position: absolute;
-    /* border: 1px solid gold; */
 }
 
 .the-clickables {
