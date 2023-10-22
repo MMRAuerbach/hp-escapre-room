@@ -189,13 +189,29 @@ const pageNineData = {
         '',
         'Then you remeber, the toad, Trevor... You promissed Neville to find the darnish thing, so onward!',
         '',
-        'When you take a good look arround, you notice the trail of Trevor leading to the bathrooms',
+        'When you take a good look arround, you notice the trail of Trevor leading to the potions classroom',
     ],
     featureImage: '',
     
     btnOptions: ['Onwards to find Trevor...', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
 }
-const pageTenData = {
+const pagePotionsData = {
+    newPar: ['', ['m-5']],
+    newInput: '',
+    removeBackground: 'dorms',
+    addBackground: 'potions-center',
+    title: `I can teach you how to bewitch the.....`,
+    mainText: [
+        'As you enter the potions classroom you remember the first thing professor Snape told you. "“I can teach you how to bewitch the mind and ensnare the senses. I can tell you how to bottle fame, brew glory, and even put a stopper in death.”',
+        '',
+        'But where did Trevor go, you need to look arround the potions classroom to search for Trevor..',
+        '',
+    ],
+    featureImage: '',
+    
+    btnOptions: ['Feel free to look arround', ['px-5', 'btn', 'btn-lg', 'btn-danger']]
+}
+const lastPuzzleData = {
     newPar: ['', ['m-5']],
     newInput: ['42', ['question-ten-input']],
     removeBackground: 'dorms',
@@ -213,7 +229,7 @@ const pageTenData = {
     ],
     btnOptions: ['Can you free the toad?', ['px-5', 'btn', 'btn-lg', 'btn-primary']]
 }
-const pageElevenData = {
+const endRoomData = {
     newPar: ['', ['m-2']],
     newInput: '',
     removeBackground: 'bathroom',

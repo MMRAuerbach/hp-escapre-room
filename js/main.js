@@ -143,6 +143,7 @@ function changeClickable(className) {
 }
 
 function showMainHall() {
+    changeBackground();
     changeClickable('greathall');
     mainMask.classList.add('hidden');
     theClickables.classList.remove('hidden');
@@ -383,8 +384,12 @@ function ninthPuzzle() {
     newBtn.addEventListener('click', tenthPuzzle);
 }
 
-function tenthPuzzle() {
-    const newBtn = alterThePage(pageTenData);
+function positionClassroom() {
+    const newBtn = alterThePage(pagePotionsData);
+}
+
+function lastPuzzle() {
+    const newBtn = alterThePage(lastPuzzleData);
 
     newBtn.addEventListener('click', function() {
         const newInput = document.querySelector('.question-ten-input');
@@ -395,13 +400,12 @@ function tenthPuzzle() {
             return;
         } 
 
-        eleventhPuzzle();
-
-    })
+        endRoom();
+    });
 }
 
-function eleventhPuzzle() {
-    const newBtn = alterThePage(pageElevenData);
+function endRoom() {
+    const newBtn = alterThePage(endRoomData);
     partyTimer = setInterval(changeBackground, 250);
     newBtn.addEventListener('click', function() {
         if (endGameTimer)
@@ -424,4 +428,12 @@ function eleventhPuzzle() {
 }
 
 //Let's start the game
-startGame();
+//startGame();
+debug = true;
+
+if (debug)
+    document.body.classList.add('debug');
+
+
+fifthPuzzle();
+
