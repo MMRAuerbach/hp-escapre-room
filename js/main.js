@@ -1,9 +1,9 @@
 console.log('Main JS loaded');
 
 /*
-The battlefield is a scene of constant chaos. 
-The winner will be the one who controls that chaos, both his own and the enemies.
-- Napoleon Bonaparte
+    The battlefield is a scene of constant chaos. 
+    The winner will be the one who controls that chaos, both his own and the enemies.
+    - Napoleon Bonaparte
 */
 const mainMask = document.querySelector('.hp-mask');
 const theClickables = document.querySelector('.the-clickables')
