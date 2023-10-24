@@ -74,6 +74,10 @@ html, body {
 }
 .hp-bg-image {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width:1350px;
+    max-height: 1200px;
 }
 .hp-bg-black {
     background-color: rgba(0, 0, 0, 0.5)
@@ -102,67 +106,67 @@ body.debug [class^="click-"] {
 .click-fireplace {
     width: 325px;
     height: 350px;
-    top: calc(100vh - 700px);
+    top: calc(100% - 700px);
     left: 0;
 }
 .click-main-door {
     width: 93px;
     height: 142px;
-    top: calc(100vh - 515px);
+    top: calc(100% - 515px);
     left: 622px;
 }
 .click-bookcase {
     width: 30px;
     height: 60px;
-    top: calc(100vh - 450px);
+    top: calc(100% - 450px);
     left: 350px;
 }
 .click-plate {
     width: 30px;
     height: 30px;
-    top: calc(100vh - 290px);
+    top: calc(100% - 290px);
     left: 505px;
 }
 .click-candles {
     width: 450px;
     height: 140px;
-    top: calc(100vh - 700px);
+    top: calc(100% - 700px);
     left: 410px;
 }
 .click-slyth {
     width: 50px;
     height: 75px;
-    top: calc(100vh - 450px);
+    top: calc(100% - 450px);
     left: 420px;
 }
 .click-huff {
     width: 50px;
     height: 75px;
-    top: calc(100vh - 450px);
+    top: calc(100% - 450px);
     left: 525px;
 }
 .click-raven {
     width: 50px;
     height: 75px;
-    top: calc(100vh - 450px);
+    top: calc(100% - 450px);
     left: 633px;
 }
 .click-doorpanel {
     width: 50px;
     height: 63px;
-    top: calc(100vh - 106px);
+    top: calc(100% - 106px);
     left: 267px;    
 }
 .click-fireplace-close {
     width: 500px;
     height: 300px;
-    top: calc(100vh - 300px);
+    top: calc(100% - 300px);
     left: 325px;
 }
 .click-hogwarts-shield {
     width: 158px;
     height: 150px;
-    top: calc(100vh - 645px);
+    top: calc(100% - 645px);
     left: 525px;
 }
 .click-goback {
