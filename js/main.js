@@ -381,7 +381,7 @@ function ninthPuzzle() {
         theDiv
     );
 
-    newBtn.addEventListener('click', tenthPuzzle);
+    newBtn.addEventListener('click', lastPuzzle);
 }
 
 function positionClassroom() {
