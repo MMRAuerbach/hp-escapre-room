@@ -48,11 +48,11 @@ html, body {
 .bg-huffle-canary {background: var(--huffle-canary); }
 
 /* Different backgrounds */
-.pancras { background: url('/img/stpancras.jpg') no-repeat center center fixed; }
-.dorms { background: url('/img/dormitory.webp') no-repeat center center fixed; }
-.privet { background: url('/img/privet.jpg') no-repeat center center fixed; }
-.platform_934 { background: url('/img/platform_9_3_4.jpg') no-repeat center center fixed; }
-.inside_hogwarts_express { background: url('/img/inside_hogwarts_express.jpg') no-repeat center center fixed; }
+.pancras { background: url('/img/stpancras.jpg') no-repeat bottom left; }
+.dorms { background: url('/img/dormitory.webp') no-repeat bottom left; }
+.privet { background: url('/img/privet.jpg') no-repeat bottom left; }
+.platform_934 { background: url('/img/platform_9_3_4.jpg') no-repeat bottom left; }
+.inside_hogwarts_express { background: url('/img/inside_hogwarts_express.jpg') no-repeat bottom left; }
 .hogwarts-castle-outside { background: url('/img/hogwarts-castle-outside.jpeg') center center fixed; }
 .greathall { background: url('/img/greathall.png') no-repeat bottom left; }
 .fireplace { background: url('/img/greathall-fireplace.png') no-repeat bottom left; }
