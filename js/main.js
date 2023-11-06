@@ -429,9 +429,10 @@ function endRoom() {
 
 //Let's start the game
 //startGame();
-//debug = true;
+debug = true;
 
 if (debug)
     document.body.classList.add('debug');
 
-startGame();
+//startGame();
+fifthPuzzle();

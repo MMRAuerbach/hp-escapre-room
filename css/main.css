@@ -134,28 +134,28 @@ body.debug [class^="click-"] {
     left: 410px;
 }
 .click-slyth {
-    width: 50px;
-    height: 75px;
-    top: calc(100% - 450px);
-    left: 420px;
+    width: 65px;
+    height: 110px;
+    top: calc(100% - 580px);
+    left: 400px;
 }
 .click-huff {
-    width: 50px;
-    height: 75px;
-    top: calc(100% - 450px);
-    left: 525px;
+    width: 65px;
+    height: 110px;
+    top: calc(100% - 580px);
+    left: 535px;
 }
 .click-raven {
-    width: 50px;
-    height: 75px;
-    top: calc(100% - 450px);
-    left: 633px;
+    width: 65px;
+    height: 110px;
+    top: calc(100% - 580px);
+    left: 675px;
 }
 .click-doorpanel {
     width: 50px;
-    height: 63px;
-    top: calc(100% - 106px);
-    left: 267px;    
+    height: 73px;
+    top: calc(100% - 128px);
+    left: 213px;    
 }
 .click-fireplace-close {
     width: 500px;
@@ -164,10 +164,10 @@ body.debug [class^="click-"] {
     left: 325px;
 }
 .click-hogwarts-shield {
-    width: 158px;
-    height: 150px;
-    top: calc(100% - 645px);
-    left: 525px;
+    width: 208px;
+    height: 200px;
+    top: calc(100% - 825px);
+    left: 530px;
 }
 .click-goback {
     width: 50px;
